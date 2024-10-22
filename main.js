@@ -14,6 +14,19 @@ class Veicolo {
         this.porte = porte;
         this.carburante = carburante;
     }
+
+    informazioni() {
+        return this;
+    }
+
+    calcolaEta() {
+        const now = new Date().getFullYear();
+        // console.log(now);
+        return  `il veicolo ha ${now - this.anno} anni`;
+    }
 }
 
-const panda = new Veicolo("Fiat", 2019, "blu", 5, "benzina")
+const panda = new Veicolo("Fiat", 2019, "blu", 5, "benzina");
+
+console.log(panda.informazioni());
+console.log(panda.calcolaEta());

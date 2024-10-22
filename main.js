@@ -33,10 +33,18 @@ class Veicolo {
 }
 
 class Automobile extends Veicolo {
-
+    porteEcarburante() {
+        return `Porte: ${this.porte} | Alimentazione: ${this.carburante}`;
+    }
 }
 
 const panda = new Veicolo("Fiat", 2019, "blu", 5, "benzina");
 
 console.log(panda.informazioni());
 console.log(panda.calcolaEta());
+
+const corsa = new Automobile("Opel", 2020, "nera", 4, "benzina");
+
+console.log(corsa.porteEcarburante());
+
+
